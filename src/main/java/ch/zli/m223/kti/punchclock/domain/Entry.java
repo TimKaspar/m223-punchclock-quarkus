@@ -1,4 +1,4 @@
-package ch.zli.m223.punchclock.domain;
+package ch.zli.m223.kti.punchclock.domain;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -15,6 +15,9 @@ public class Entry {
 
     @Column(nullable = false)
     private LocalDateTime checkOut;
+
+    @ManyToOne
+    private Category category;
 
     public Long getId() {
         return id;
@@ -38,5 +41,13 @@ public class Entry {
 
     public void setCheckOut(LocalDateTime checkOut) {
         this.checkOut = checkOut;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
     }
 }

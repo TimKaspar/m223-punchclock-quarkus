@@ -1,4 +1,4 @@
-package ch.zli.m223.punchclock.service;
+package ch.zli.m223.kti.punchclock.service;
 
 import java.time.Duration;
 import java.util.Arrays;
