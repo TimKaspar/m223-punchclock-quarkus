@@ -21,13 +21,14 @@ public class EntryController {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @JsonIgnore
-    @Operation(summary = "List all Entries", description = "return List of all Entries")
+    @Operation(summary = "List all Entries", description = "Returns a List of all Entries")
     public List<Entry> list() {
         return entryService.getAllEntries();
     }
 
     @GET
     @Path("/{id}")
+    @Operation(summary = "Provides a specific Entry", description = "Returns the Entry with the matching id")
     public Entry get(@PathParam("id") Long entryId) {
         return entryService.getEntry(entryId);
     }
@@ -35,13 +36,14 @@ public class EntryController {
     @POST
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    @Operation(summary = "Add a new Entry", description = "The newly created entry is returned. The id may not be passed.")
+    @Operation(summary = "Add a new Entry", description = "The newly created Entry is returned. The id may not be passed.")
     public Entry add(Entry entry) {
         return entryService.createEntry(entry);
     }
 
     @DELETE
     @Path("/{id}")
+    @Operation(summary = "Delete a Entry", description = "Deletes the Entry with the matching id")
     public void delete(@PathParam("id") Long entryId) {
         entryService.deleteEntry(entryId);
     }
@@ -50,6 +52,7 @@ public class EntryController {
     @PUT
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
+    @Operation(summary = "Update a Entry", description = "Updates the Entry with new values")
     public Entry update(Entry entry) {
         return entryService.update(entry);
     }
