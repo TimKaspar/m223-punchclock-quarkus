@@ -11,10 +11,10 @@ public class Entry {
     private Long id;
 
     @Column(nullable = false)
-    private LocalDateTime checkIn;
+    private String checkIn;
 
     @Column(nullable = false)
-    private LocalDateTime checkOut;
+    private String checkOut;
 
     @ManyToOne
     private Category category;
@@ -27,19 +27,19 @@ public class Entry {
         this.id = id;
     }
 
-    public LocalDateTime getCheckIn() {
+    public String getCheckIn() {
         return checkIn;
     }
 
-    public void setCheckIn(LocalDateTime checkIn) {
+    public void setCheckIn(String checkIn) {
         this.checkIn = checkIn;
     }
 
-    public LocalDateTime getCheckOut() {
+    public String getCheckOut() {
         return checkOut;
     }
 
-    public void setCheckOut(LocalDateTime checkOut) {
+    public void setCheckOut(String checkOut) {
         this.checkOut = checkOut;
     }
 
