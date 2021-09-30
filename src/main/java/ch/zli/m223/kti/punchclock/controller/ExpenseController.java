@@ -21,13 +21,14 @@ public class ExpenseController {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @JsonIgnore
-    @Operation(summary = "List all Expenses", description = "return List of all Expenses")
+    @Operation(summary = "List all Expenses", description = "Returns a List of all Expenses")
     public List<Expense> list() {
         return expenseService.getAllExpenses();
     }
 
     @GET
     @Path("/{id}")
+    @Operation(summary = "Provides a specific Expense", description = "Returns the Expense with the matching id")
     public Expense get(@PathParam("id") Long expenseId) {
         return expenseService.getExpense(expenseId);
     }
@@ -42,6 +43,7 @@ public class ExpenseController {
 
     @DELETE
     @Path("/{id}")
+    @Operation(summary = "Delete a Expense", description = "Deletes the Expense with the matching id")
     public void delete(@PathParam("id") Long expenseId) {
         expenseService.deleteExpense(expenseId);
     }
@@ -49,6 +51,7 @@ public class ExpenseController {
     @PUT
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
+    @Operation(summary = "Update a Expense", description = "Updates the Expense with new values")
     public Expense update(Expense expense) {
         return expenseService.update(expense);
     }
