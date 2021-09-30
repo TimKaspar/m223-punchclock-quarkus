@@ -23,13 +23,14 @@ public class AbsenceController {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @JsonIgnore
-    @Operation(summary = "List all Absences", description = "return List of all Absences")
+    @Operation(summary = "List all Absences", description = "Returns List of all Absences")
     public List<Absence> list() {
         return absenceService.getAllAbsences();
     }
 
     @GET
     @Path("/{id}")
+    @Operation(summary = "Provides a specific Absence", description = "Returns the Absence with the matching id")
     public Absence get(@PathParam("id") Long absenceId) {
         return absenceService.getAbsence(absenceId);
     }
@@ -44,6 +45,7 @@ public class AbsenceController {
 
     @DELETE
     @Path("/{id}")
+    @Operation(summary = "Delete a Absence", description = "Deletes the Absence with the matching id")
     public void delete(@PathParam("id") Long absenceId) {
         absenceService.deleteAbsence(absenceId);
     }
@@ -51,6 +53,7 @@ public class AbsenceController {
     @PUT
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
+    @Operation(summary = "Update a Absence", description = "Updates the Absence with new values")
     public Absence update(Absence absence) {
         return absenceService.update(absence);
     }
