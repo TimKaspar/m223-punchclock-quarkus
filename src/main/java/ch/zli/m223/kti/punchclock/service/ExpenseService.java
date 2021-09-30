@@ -46,9 +46,7 @@ public class ExpenseService {
     public List getExpensesOver50(){
         StringBuffer sql = new StringBuffer();
 
-        sql.append(" SELECT *");
-        sql.append(" FROM expense");
-        sql.append(" WHERE expense.amount >= 50.00");
+        sql.append("FROM Expense GROUP BY amount HAVING SUM(amount) > 50.0");
 
         Query q = entityManager.createQuery( sql.toString() );
 
