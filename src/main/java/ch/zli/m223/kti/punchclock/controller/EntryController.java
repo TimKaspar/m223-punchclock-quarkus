@@ -1,17 +1,15 @@
 package ch.zli.m223.kti.punchclock.controller;
 
-import java.util.List;
-
-import javax.inject.Inject;
-import javax.ws.rs.*;
-import javax.ws.rs.core.MediaType;
-
+import ch.zli.m223.kti.punchclock.domain.Entry;
 import ch.zli.m223.kti.punchclock.service.EntryService;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.eclipse.microprofile.openapi.annotations.Operation;
 import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 
-import ch.zli.m223.kti.punchclock.domain.Entry;
+import javax.inject.Inject;
+import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
+import java.util.List;
 
 @Path("/entries")
 @Tag(name = "Entries", description = "Handling of entries")

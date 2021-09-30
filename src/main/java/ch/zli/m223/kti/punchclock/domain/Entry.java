@@ -1,7 +1,6 @@
 package ch.zli.m223.kti.punchclock.domain;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
 
 @Entity
 public class Entry {

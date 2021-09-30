@@ -1,13 +1,12 @@
 package ch.zli.m223.kti.punchclock.service;
 
-import java.util.List;
+import ch.zli.m223.kti.punchclock.domain.Entry;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.transaction.Transactional;
-
-import ch.zli.m223.kti.punchclock.domain.Entry;
+import java.util.List;
 
 //@Authenticated
 @ApplicationScoped
