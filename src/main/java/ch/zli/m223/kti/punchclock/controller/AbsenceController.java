@@ -47,4 +47,11 @@ public class AbsenceController {
     public void delete(@PathParam("id") Long absenceId) {
         absenceService.deleteAbsence(absenceId);
     }
+
+    @PUT
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Absence update(Absence absence) {
+        return absenceService.update(absence);
+    }
 }
