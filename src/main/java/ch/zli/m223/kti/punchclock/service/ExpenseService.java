@@ -22,7 +22,7 @@ public class ExpenseService {
     }
 
     @SuppressWarnings("unchecked")
-    public List<Expense> findAll() {
+    public List<Expense> getAllExpenses() {
         var query = entityManager.createQuery("FROM Expense");
         return query.getResultList();
     }
