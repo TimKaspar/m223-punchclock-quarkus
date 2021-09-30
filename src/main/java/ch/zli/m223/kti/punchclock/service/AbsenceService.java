@@ -26,6 +26,12 @@ public class AbsenceService {
         return query.getResultList();
     }
 
+    @Transactional
+    public void deleteAbsence(Long absenceID) {
+        var obj = getAbsence(absenceID);
+        entityManager.remove(obj);
+    }
+
     public Entry getAbsence(Long absenceId) {
         return entityManager.find(Entry.class, absenceId);
     }
