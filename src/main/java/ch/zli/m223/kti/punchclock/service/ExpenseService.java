@@ -25,4 +25,10 @@ public class ExpenseService {
         return query.getResultList();
     }
 
+    @Transactional
+    public void deleteExpense(Long expenseId) {
+        var obj = getExpense(expenseId);
+        entityManager.remove(obj);
+    }
+
 }
