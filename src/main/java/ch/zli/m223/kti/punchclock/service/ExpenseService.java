@@ -31,4 +31,8 @@ public class ExpenseService {
         entityManager.remove(obj);
     }
 
+    public Entry getExpense(Long expenseId) {
+        return entityManager.find(Entry.class, expenseId);
+    }
+
 }
