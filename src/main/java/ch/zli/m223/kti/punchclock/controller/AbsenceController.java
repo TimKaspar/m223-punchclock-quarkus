@@ -1,6 +1,7 @@
 package ch.zli.m223.kti.punchclock.controller;
 
 import ch.zli.m223.kti.punchclock.domain.Absence;
+import ch.zli.m223.kti.punchclock.domain.Entry;
 import ch.zli.m223.kti.punchclock.domain.Expense;
 import ch.zli.m223.kti.punchclock.service.AbsenceService;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -8,10 +9,7 @@ import org.eclipse.microprofile.openapi.annotations.Operation;
 import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 
 import javax.inject.Inject;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
 
@@ -34,5 +32,13 @@ public class AbsenceController {
     @Path("/{id}")
     public Absence get(@PathParam("id") Long absenceId) {
         return absenceService.getAbsence(absenceId);
+    }
+
+    @POST
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Operation(summary = "Add a new Absences", description = "The newly created Absences is returned. The id may not be passed.")
+    public Absence add(Absence absence) {
+        return absenceService.createAbsence(absence);
     }
 }
