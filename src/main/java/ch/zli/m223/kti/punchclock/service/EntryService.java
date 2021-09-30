@@ -25,7 +25,7 @@ public class EntryService {
     }
 
     @SuppressWarnings("unchecked")
-    public List<Entry> findAll() {
+    public List<Entry> getAllEntries() {
         var query = entityManager.createQuery("FROM Entry");
         return query.getResultList();
     }
