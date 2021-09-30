@@ -46,4 +46,11 @@ public class ExpenseController {
     public void delete(@PathParam("id") Long expenseId) {
         expenseService.deleteExpense(expenseId);
     }
+
+    @PUT
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Expense update(Expense expense) {
+        return expenseService.update(expense);
+    }
 }
