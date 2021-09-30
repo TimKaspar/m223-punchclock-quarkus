@@ -32,6 +32,12 @@ public class AbsenceService {
         entityManager.remove(obj);
     }
 
+    @Transactional
+    public Absence update(Absence absence) {
+        entityManager.merge(absence);
+        return absence;
+    }
+
     public Entry getAbsence(Long absenceId) {
         return entityManager.find(Entry.class, absenceId);
     }
