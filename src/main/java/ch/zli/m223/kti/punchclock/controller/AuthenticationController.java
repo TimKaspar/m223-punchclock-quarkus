@@ -16,8 +16,8 @@ public class AuthenticationController {
     @Path("/login")
     @Produces(MediaType.TEXT_PLAIN)
     @Consumes(MediaType.APPLICATION_JSON)
-    public String login(User user){
-        if(user == null){
+    public String login(User user) {
+        if (user == null) {
             throw new NotAuthorizedException("User does not exist");
         }
 
