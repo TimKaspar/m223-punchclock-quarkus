@@ -23,7 +23,7 @@ public class AbsenceController {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @JsonIgnore
-    @Operation(summary = "List all Absences", description = "Returns List of all Absences")
+    @Operation(summary = "List all Absences", description = "Returns a List of all Absences")
     public List<Absence> list() {
         return absenceService.getAllAbsences();
     }
