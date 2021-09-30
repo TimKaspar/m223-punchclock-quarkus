@@ -47,6 +47,7 @@ The data is as follows:
 | 1 | 'Admin' |
 | 2 | 'Projekte' |
 | 3 | 'IT-Support' |
+<br/>
 ### entry:
 | id | checkIn | checkOut | category_id |
 | 1 | '2021-09-30T07:16:14.807Z' | '2021-10-30T07:16:14.807Z' | 1 |
