@@ -36,8 +36,9 @@ Password: zli
 At start a script is run which inserts example data into the database <br/>
 The data is as follows:
 <br/>
+
 | command | description |
-### category:
+**category:**
 | id | title |
 | 1 | 'Admin' |
 | 2 | 'Projekte' |
