@@ -39,7 +39,7 @@ public class AbsenceService {
         return absence;
     }
 
-    public Entry getAbsence(Long absenceId) {
-        return entityManager.find(Entry.class, absenceId);
+    public Absence getAbsence(Long absenceId) {
+        return entityManager.find(Absence.class, absenceId);
     }
 }

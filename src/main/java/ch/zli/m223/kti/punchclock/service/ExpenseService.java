@@ -39,8 +39,8 @@ public class ExpenseService {
         return expense;
     }
 
-    public Entry getExpense(Long expenseId) {
-        return entityManager.find(Entry.class, expenseId);
+    public Expense getExpense(Long expenseId) {
+        return entityManager.find(Expense.class, expenseId);
     }
 
 }
