@@ -31,6 +31,12 @@ public class ExpenseService {
         entityManager.remove(obj);
     }
 
+    @Transactional
+    public Expense update(Expense expense) {
+        entityManager.merge(expense);
+        return expense;
+    }
+
     public Entry getExpense(Long expenseId) {
         return entityManager.find(Entry.class, expenseId);
     }
