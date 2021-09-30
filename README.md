@@ -35,21 +35,8 @@ Password: zli
 ## Script for example data
 At start a script is run which inserts example data into the database <br/>
 The data is as follows:
-
-# Frontend (Flutter)
-## Purpose
-The Flutter frontend serves as a interface for the backend and as a way to create/edit/view/delete the entities of the database.
-The Flutter Application has only been tested on web but since the Flutter framework also works on IOS, Android and Windows the adjustments needed to get it working on additional operating systemns should not be too big.
-
-## Install Flutter
-Follow this guide to install Flutter: 
-[Flutter-Install](https://flutter.dev/docs/get-started/install)<br/>
-
-if not already on Stable, switch to Flutter Channel Stable<br/>
-```shell script
-    flutter channel stable
-```
 <br/>
+| command | description |
 ### category:
 | id | title |
 | 1 | 'Admin' |
@@ -75,6 +62,21 @@ if not already on Stable, switch to Flutter Channel Stable<br/>
 | 4 | 11.50 | 'Coop-SihlCity' |
 | 5 | 356.90 | 'GameStop-SihlCity'  |
 
+
+# Frontend (Flutter)
+## Purpose
+The Flutter frontend serves as a interface for the backend and as a way to create/edit/view/delete the entities of the database.
+The Flutter Application has only been tested on web but since the Flutter framework also works on IOS, Android and Windows the adjustments needed to get it working on additional operating systemns should not be too big.
+
+## Install Flutter
+Follow this guide to install Flutter: 
+[Flutter-Install](https://flutter.dev/docs/get-started/install)<br/>
+
+if not already on Stable, switch to Flutter Channel Stable<br/>
+```shell script
+    flutter channel stable
+```
+<br/>
 
 Download FLutter **_2.5.1_** from the official Flutter releases page: [Flutter releases 2.5.1](https://flutter.dev/docs/development/tools/sdk/releases)<br/>
 
