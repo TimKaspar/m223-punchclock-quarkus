@@ -25,4 +25,8 @@ public class AbsenceService {
         var query = entityManager.createQuery("FROM Absence");
         return query.getResultList();
     }
+
+    public Entry getAbsence(Long absenceId) {
+        return entityManager.find(Entry.class, absenceId);
+    }
 }
