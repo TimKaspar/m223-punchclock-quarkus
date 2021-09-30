@@ -44,9 +44,7 @@ public class ExpenseService {
     }
 
     public List getExpensesOver50() {
-
         Query q = entityManager.createQuery("FROM Expense GROUP BY amount HAVING SUM(amount) > 50.0");
-
         return q.getResultList();
     }
 
