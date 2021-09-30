@@ -2,7 +2,6 @@ package ch.zli.m223.kti.punchclock.service;
 
 import ch.zli.m223.kti.punchclock.domain.Absence;
 import ch.zli.m223.kti.punchclock.domain.Entry;
-import ch.zli.m223.kti.punchclock.domain.Expense;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
