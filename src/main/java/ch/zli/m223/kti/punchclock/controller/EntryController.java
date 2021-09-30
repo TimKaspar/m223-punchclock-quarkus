@@ -50,7 +50,7 @@ public class EntryController {
     @PUT
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Entry updateEntry(Entry entry) {
+    public Entry update(Entry entry) {
         return entryService.update(entry);
     }
 
