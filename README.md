@@ -37,7 +37,11 @@ At start a script is run which inserts example data into the database <br/>
 The data is as follows:
 <br/>
 
+**Some useful commands:**
 | command | description |
+| ------ | ------ |
+| `flutter help` | shows a list of commands Flutter supports |
+<br/>
 **category:**
 | id | title |
 | 1 | 'Admin' |
