@@ -3,11 +3,13 @@ package ch.zli.m223.kti.punchclock.service;
 import ch.zli.m223.kti.punchclock.domain.Entry;
 import ch.zli.m223.kti.punchclock.domain.Expense;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.transaction.Transactional;
 import java.util.List;
 
+@ApplicationScoped
 public class ExpenseService {
 
     @Inject
