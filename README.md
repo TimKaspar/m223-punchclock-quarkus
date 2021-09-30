@@ -38,6 +38,7 @@ The data is as follows:
 <br/>
 
 **Some useful commands:**
+
 | command | description |
 | ------ | ------ |
 | `flutter help` | shows a list of commands Flutter supports |
