@@ -32,6 +32,9 @@ Password: zli
 <br/>
 <br/>
 
+## JPQL
+The JPQL query with `HAVING` is located in _ExpenseService.getExpensesOver50()_ and is designed to return all Expenses with an amount that is greater than 50.
+
 ## Script for example data
 At start a script is run which inserts example data into the database <br/>
 The data is as follows:
