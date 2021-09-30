@@ -42,6 +42,7 @@ The data is as follows:
 | ------ | ------ |
 | `flutter help` | shows a list of commands Flutter supports |
 <br/>
+<br/>
 
 **category:**
 | id | title |
