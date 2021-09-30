@@ -58,6 +58,7 @@ public class ExpenseController {
 
     @GET
     @Path("/over50")
+    @Operation(summary = "Return Expenses with an amount greater than 50", description = "Return all Expenses with an amount greater than 50")
     public List getExpensesOver50(){
         return expenseService.getExpensesOver50();
     }
