@@ -10,6 +10,7 @@ import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
@@ -27,5 +28,11 @@ public class ExpenseController {
     @Operation(summary = "List all Expenses", description = "return List of all Expenses")
     public List<Expense> list() {
         return expenseService.getAllExpenses();
+    }
+
+    @GET
+    @Path("/{id}")
+    public Expense get(@PathParam("id") Long expenseId) {
+        return expenseService.getExpense(expenseId);
     }
 }
