@@ -40,4 +40,10 @@ public class ExpenseController {
     public Expense add(Expense expense) {
         return expenseService.createExpense(expense);
     }
+
+    @DELETE
+    @Path("/{id}")
+    public void delete(@PathParam("id") Long expenseId) {
+        expenseService.deleteExpense(expenseId);
+    }
 }
