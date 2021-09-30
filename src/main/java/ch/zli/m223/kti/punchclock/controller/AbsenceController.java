@@ -30,4 +30,9 @@ public class AbsenceController {
         return absenceService.getAllAbsences();
     }
 
+    @GET
+    @Path("/{id}")
+    public Absence get(@PathParam("id") Long absenceId) {
+        return absenceService.getAbsence(absenceId);
+    }
 }
