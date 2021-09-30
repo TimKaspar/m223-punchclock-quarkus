@@ -1,6 +1,5 @@
 package ch.zli.m223.kti.punchclock.controller;
 
-import ch.zli.m223.kti.punchclock.domain.Entry;
 import ch.zli.m223.kti.punchclock.domain.Expense;
 import ch.zli.m223.kti.punchclock.service.ExpenseService;
 import com.fasterxml.jackson.annotation.JsonIgnore;
