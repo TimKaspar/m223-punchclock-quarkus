@@ -41,4 +41,10 @@ public class AbsenceController {
     public Absence add(Absence absence) {
         return absenceService.createAbsence(absence);
     }
+
+    @DELETE
+    @Path("/{id}")
+    public void delete(@PathParam("id") Long absenceId) {
+        absenceService.deleteAbsence(absenceId);
+    }
 }
