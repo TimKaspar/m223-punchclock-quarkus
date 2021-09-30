@@ -8,10 +8,7 @@ import org.eclipse.microprofile.openapi.annotations.Operation;
 import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 
 import javax.inject.Inject;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
 
@@ -34,5 +31,13 @@ public class ExpenseController {
     @Path("/{id}")
     public Expense get(@PathParam("id") Long expenseId) {
         return expenseService.getExpense(expenseId);
+    }
+
+    @POST
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Operation(summary = "Add a new Expense", description = "The newly created Expense is returned. The id may not be passed.")
+    public Expense add(Expense expense) {
+        return expenseService.createExpense(expense);
     }
 }
