@@ -1,11 +1,11 @@
 package ch.zli.m223.kti.punchclock.service;
 
-import ch.zli.m223.kti.punchclock.domain.Entry;
 import ch.zli.m223.kti.punchclock.domain.Expense;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 import javax.transaction.Transactional;
 import java.util.List;
 
@@ -41,6 +41,18 @@ public class ExpenseService {
 
     public Expense getExpense(Long expenseId) {
         return entityManager.find(Expense.class, expenseId);
+    }
+
+    public List getExpensesOver50(){
+        StringBuffer sql = new StringBuffer();
+
+        sql.append(" SELECT *");
+        sql.append(" FROM expense");
+        sql.append(" WHERE expense.amount >= 50.00");
+
+        Query q = entityManager.createQuery( sql.toString() );
+
+        return q.getResultList();
     }
 
 }
