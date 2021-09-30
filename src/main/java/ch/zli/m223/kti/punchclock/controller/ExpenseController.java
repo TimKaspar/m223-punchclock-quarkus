@@ -55,4 +55,10 @@ public class ExpenseController {
     public Expense update(Expense expense) {
         return expenseService.update(expense);
     }
+
+    @GET
+    @Path("/over50")
+    public List getExpensesOver50(){
+        return expenseService.getExpensesOver50();
+    }
 }
